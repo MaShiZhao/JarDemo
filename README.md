@@ -3,6 +3,8 @@ Android Studio生成jar包
 
  http://blog.csdn.net/qq_23547831/article/details/51966166
 
+两种方式
+
 1.创建module-library 
   修改代码自动创建
   在build/intermediates/bundles/release/classes.jar
