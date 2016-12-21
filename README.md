@@ -62,7 +62,22 @@ task makeJar(type: Copy) {
     如果只有instant-run 没有aapt manifest classes.jar等
 
        查看build.gradle里面  plugin: 'com.android.library' 是否是library 还是application
+       
 
 
-
+aar 同时在 app/build/output/aar/ 下
+  
   
+  将aar放在你所需要引用工程的libs文件夹中。在project的build.gradle文件中添加 
+  
+    repositories {
+       flatDir {
+         dirs 'libs'
+        }
+    }
+    
+    注意 当library中含有资源文件及libs文件时，强烈推荐这种打包方式
+
+     dependencies {
+       compile(name:'cards', ext:'aar')
+      }
